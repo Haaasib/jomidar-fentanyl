@@ -1,7 +1,7 @@
 Config = {}
 
-Config.Core = 'sbrp-core'
-Config.Menu = 'sbrp-menu'
+Config.Core = 'qb-core'
+Config.Menu = 'qb-menu'
 
 Config.DeliveryLoc = {
     ["deliveryspots"] = {
