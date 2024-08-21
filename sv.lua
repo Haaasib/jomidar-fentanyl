@@ -90,7 +90,7 @@ RegisterNetEvent('jomidar_fentanyl:startCookingMatch', function(status)
 
     -- Notify the player based on the result
     if not itemFound then
-        TriggerClientEvent('QBCore:Notify', src, "No moonshine items found in stash", "error")
+        TriggerClientEvent('QBCore:Notify', src, "No items found in stash", "error")
     elseif next(missingItems) == nil then
         -- No missing items
         MySQL.Sync.execute("UPDATE stashitems SET items = '[]' WHERE stash = ?", { stashName })
@@ -181,7 +181,7 @@ RegisterNetEvent('jomidar_fentanyl:startCookingNotMatch', function(status)
 
     -- Notify the player based on the result
     if not itemFound then
-        TriggerClientEvent('QBCore:Notify', src, "No moonshine items found in stash", "error")
+        TriggerClientEvent('QBCore:Notify', src, "No items found in stash", "error")
     elseif next(missingItems) == nil then
         -- No missing items
         MySQL.Sync.execute("UPDATE stashitems SET items = '[]' WHERE stash = ?", { stashName })
